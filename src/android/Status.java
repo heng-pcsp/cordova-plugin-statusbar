@@ -17,7 +17,7 @@
  * under the License.
  *
 */
-package org.apache.cordova.statusbar;
+package org.apache.cordova.status;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -35,8 +35,8 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONException;
 
-public class StatusBar extends CordovaPlugin {
-    private static final String TAG = "StatusBar";
+public class Status extends CordovaPlugin {
+    private static final String TAG = "Status";
 
     /**
      * Sets the context of the Command. This can then be used to do things like
@@ -47,7 +47,7 @@ public class StatusBar extends CordovaPlugin {
      */
     @Override
     public void initialize(final CordovaInterface cordova, CordovaWebView webView) {
-        Log.v(TAG, "StatusBar: initialization");
+        Log.v(TAG, "Status: initialization");
         super.initialize(cordova, webView);
 
         this.cordova.getActivity().runOnUiThread(new Runnable() {
