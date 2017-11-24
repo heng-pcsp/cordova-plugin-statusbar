@@ -5,8 +5,7 @@
   "cordova": {
     "id": "cordova-plugin-statusbar",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
   "repository": {
