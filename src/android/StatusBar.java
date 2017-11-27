@@ -17,7 +17,7 @@
  * under the License.
  *
 */
-package org.apache.cordova.status;
+package org.apache.cordova.statusbar;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -35,8 +35,8 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONException;
 
-public class Status extends CordovaPlugin {
-    private static final String TAG = "Status";
+public class StatusBar extends CordovaPlugin {
+    private static final String TAG = "StatusBar";
 
     /**
      * Sets the context of the Command. This can then be used to do things like
