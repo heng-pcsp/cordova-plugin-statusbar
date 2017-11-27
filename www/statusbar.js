@@ -40,7 +40,7 @@ var namedColors = {
     "brown": "#A52A2A"
 };
 
-var Status = {
+var StatusBar = {
 
     isVisible: true,
 
@@ -50,26 +50,26 @@ var Status = {
 
     styleDefault: function () {
         // dark text ( to be used on a light background )
-        exec(null, null, "Status", "styleDefault", []);
+        exec(null, null, "StatusBar", "styleDefault", []);
     },
 
     styleLightContent: function () {
         // light text ( to be used on a dark background )
-        exec(null, null, "Status", "styleLightContent", []);
+        exec(null, null, "StatusBar", "styleLightContent", []);
     },
 
     styleBlackTranslucent: function () {
         // #88000000 ? Apple says to use lightContent instead
-        exec(null, null, "Status", "styleBlackTranslucent", []);
+        exec(null, null, "StatusBar", "styleBlackTranslucent", []);
     },
 
     styleBlackOpaque: function () {
         // #FF000000 ? Apple says to use lightContent instead
-        exec(null, null, "Status", "styleBlackOpaque", []);
+        exec(null, null, "StatusBar", "styleBlackOpaque", []);
     },
 
     backgroundColorByName: function (colorname) {
-        return Status.backgroundColorByHexString(namedColors[colorname]);
+        return StatusBar.backgroundColorByHexString(namedColors[colorname]);
     },
 
     backgroundColorByHexString: function (hexString) {
@@ -82,17 +82,17 @@ var Status = {
             hexString = "#" + split[1] + split[1] + split[2] + split[2] + split[3] + split[3];
         }
 
-        exec(null, null, "Status", "backgroundColorByHexString", [hexString]);
+        exec(null, null, "StatusBar", "backgroundColorByHexString", [hexString]);
     },
 
     hide: function () {
-        exec(null, null, "Status", "hide", []);
-        Status.isVisible = false;
+        exec(null, null, "StatusBar", "hide", []);
+        StatusBar.isVisible = false;
     },
 
     show: function () {
-        exec(null, null, "Status", "show", []);
-        Status.isVisible = true;
+        exec(null, null, "StatusBar", "show", []);
+        StatusBar.isVisible = true;
     }
 
 };
@@ -105,9 +105,9 @@ window.setTimeout(function () {
                 cordova.fireWindowEvent('statusTap');
             }
         } else {
-            Status.isVisible = res;
+            StatusBar.isVisible = res;
         }
-    }, null, "Status", "_ready", []);
+    }, null, "StatusBar", "_ready", []);
 }, 0);
 
-module.exports = Status;
+module.exports = StatusBar;

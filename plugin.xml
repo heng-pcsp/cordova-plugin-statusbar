@@ -21,27 +21,27 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-status"
+    id="cordova-plugin-statusbar"
     version="2.1.4-dev">
     <name>Status</name>
     <description>Cordova Status Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>cordova,status</keywords>
+    <keywords>cordova,statusbar</keywords>
 
     <engines>
             <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <js-module src="www/status.js" name="status">
-        <clobbers target="window.Status" />
+    <js-module src="www/statusbar.js" name="statusbar">
+        <clobbers target="window.StatusBar" />
     </js-module>
 
     <platform name="android">
-        <source-file src="src/android/Status.java" target-dir="src/org/apache/cordova/status" />
+        <source-file src="src/android/StatusBar.java" target-dir="src/org/apache/cordova/statusbar" />
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Status">
-                <param name="android-package" value="org.apache.cordova.status.Status" />
+            <feature name="StatusBar">
+                <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
